@@ -1,0 +1,25 @@
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: ""
+    app.openshift.io/vcs-uri: https://github.com/thehatrack/traffic-patterns.git
+    opendatahub.io/notebook-image-desc: Jupyter lab image for traffic patterns demo.
+    opendatahub.io/notebook-image-name: Traffic patterms lab environment
+    opendatahub.io/notebook-image-url: https://github.com/thehatrack/traffic-patterns
+  labels:
+    app: traffic-patterns-notebook-image
+    app.kubernetes.io/component: traffic-patterns-notebook-image
+    app.kubernetes.io/instance: traffic-patterns-notebook-image
+    app.kubernetes.io/part-of: traffic-patterns
+    opendatahub.io/notebook-image: "true"
+  name: traffic-patterns-notebook-image
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+    - annotations: null
+      from:
+        kind: ImageStreamTag
+        name: traffic-patterns-notebook-image:latest
+      name: latest

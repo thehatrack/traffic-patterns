@@ -4,21 +4,21 @@ items:
   data:
     profile: |
       gpu: '0'
-      last_selected_image: boat-demo-notebook-image:latest
+      last_selected_image: traffic-patterns-notebook-image:latest
       last_selected_size: Large
   kind: ConfigMap
   metadata:
     labels:
       app: jupyterhub
-    name: jupyterhub-singleuser-profile-kubeadmin
+    name: jupyterhub-singleuser-profile-kube-3aadmin
 - apiVersion: v1
   data:
-    JUPYTER_PRELOAD_REPOS: https://github.com/redhat-naps-da/boat-demo.git
+    JUPYTER_PRELOAD_REPOS: https://github.com/thehatrack/traffic-patterns
   kind: ConfigMap
   metadata:
     labels:
       app: jupyterhub
-    name: jupyterhub-singleuser-profile-kubeadmin-envs
+    name: jupyterhub-singleuser-profile-kube-3aadmin-envs
 kind: List
 metadata:
   resourceVersion: ""

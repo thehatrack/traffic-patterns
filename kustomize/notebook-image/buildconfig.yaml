@@ -1,0 +1,42 @@
+apiVersion: build.openshift.io/v1
+kind: BuildConfig
+metadata:
+  annotations:
+    app.openshift.io/vcs-ref: ""
+    app.openshift.io/vcs-uri: https://github.com/thehatrack/traffic-patterns.git
+  labels:
+    app: traffic-patterns-notebook-image
+    app.kubernetes.io/component: traffic-patterns-notebook-image
+    app.kubernetes.io/instance: traffic-patterns-notebook-image
+    app.kubernetes.io/part-of: traffic-patterns
+  name: traffic-patterns-notebook-image
+spec:
+  failedBuildsHistoryLimit: 5
+  nodeSelector: null
+  output:
+    to:
+      kind: ImageStreamTag
+      name: traffic-patterns-notebook-image:latest
+  postCommit: {}
+  resources: {}
+  runPolicy: Serial
+  source:
+    contextDir: /
+    git:
+      uri: https://github.com/thehatrack/traffic-patterns.git
+    type: Git
+  strategy:
+    dockerStrategy:
+      dockerfilePath: Dockerfile.notebook
+    type: Docker
+  successfulBuildsHistoryLimit: 5
+  triggers:
+  - generic:
+      secretReference:
+        name: traffic-patterns-notebook-image-generic-webhook-secret
+    type: Generic
+  - github:
+      secretReference:
+        name: traffic-patterns-notebook-image-github-webhook-secret
+    type: GitHub
+  - type: ConfigChange
