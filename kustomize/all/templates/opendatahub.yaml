@@ -12,3 +12,5 @@ spec:
     path: kustomize/opendatahub
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
+  syncPolicy:                                                                         │[core@bastion ~]$
+    automated: {}
