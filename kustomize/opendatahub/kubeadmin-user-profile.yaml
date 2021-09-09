@@ -13,7 +13,7 @@ items:
     name: jupyterhub-singleuser-profile-kube-3aadmin
 - apiVersion: v1
   data:
-    JUPYTER_PRELOAD_REPOS: https://github.com/thehatrack/traffic-patterns
+    JUPYTER_PRELOAD_REPOS1: https://github.com/thehatrack/traffic-patterns
   kind: ConfigMap
   metadata:
     labels:
