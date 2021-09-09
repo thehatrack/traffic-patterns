@@ -8,4 +8,4 @@ pycocotools==2.0.2
 scikit-image==0.18.3
 h5py==2.10.0
 tensorflow==2.6.0
-keras==2.6.0
+keras==2.0.8
