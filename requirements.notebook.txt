@@ -2,3 +2,4 @@ ipywidgets==7.6.3
 jupyterlab==3.1.11
 elyra==3.0.1
 nbclassic>=0.2.8
+jupyterlab-execute-time==2.0.5

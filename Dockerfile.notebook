@@ -5,6 +5,7 @@ COPY requirements.txt /requirements.txt
 COPY requirements.notebook.txt /requirements.notebook.txt
 RUN dnf install -y mesa-libGL; \
     pip install -r /requirements.txt; \
-    pip install -r /requirements.notebook.txt
+    pip install -r /requirements.notebook.txt; \
+    jupyter lab build
 ENV JUPYTER_ENABLE_LAB=true
 USER 1001
