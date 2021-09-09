@@ -1,4 +1,4 @@
-FROM quay.io/thoth-station/s2i-minimal-notebook:v0.0.7
+FROM quay.io/thoth-station/s2i-minimal-notebook:v0.0.14
 
 USER root
 COPY requirements.txt /requirements.txt
