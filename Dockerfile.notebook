@@ -2,9 +2,9 @@ FROM quay.io/thoth-station/s2i-minimal-notebook:v0.0.14
 
 USER root
 COPY requirements.txt /requirements.txt
-COPY requirements.lab.txt /requirements.lab.txt
+COPY requirements.notebook.txt /requirements.notebook.txt
 RUN dnf install -y mesa-libGL; \
     pip install -r /requirements.txt; \
-    pip install -r /requirements.lab.txt
+    pip install -r /requirements.notebook.txt
 ENV JUPYTER_ENABLE_LAB=true
 USER 1001
