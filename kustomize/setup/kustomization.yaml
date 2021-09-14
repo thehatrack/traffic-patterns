@@ -1,0 +1,4 @@
+resources:
+  - 0_project.yaml
+  - 1_rolebinding.yaml
+  - 2_application.yaml

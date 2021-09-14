@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: traffic-patterns
+  namespace: openshift-gitops
+spec:
+  destination:
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    helm:
+      parameters:
+      - name: spec.destination.namespace
+        value: traffic-patterns
+    path: kustomize/all
+    repoURL: https://github.com/thehatrack/traffic-patterns.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
