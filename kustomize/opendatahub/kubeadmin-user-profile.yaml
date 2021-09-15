@@ -21,13 +21,6 @@ items:
     labels:
       app: jupyterhub
     name: jupyterhub-singleuser-profile-kube-3aadmin-envs
-- apiVersion: v1
-  kind: Secret
-  metadata:
-    name: jupyterhub-singleuser-profile-kube-3aadmin-envs
-    labels:
-      app: jupyterhub
-  data: $(BUCKET_SECRETS)
 kind: List
 metadata:
   resourceVersion: ""
