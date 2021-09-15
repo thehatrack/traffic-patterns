@@ -25,7 +25,7 @@ spec:
           name: manifests
           path: jupyterhub/notebook-images
       name: notebook-images
-		- kustomizeConfig:
+    - kustomizeConfig:
         repoRef:
           name: manifests
           path: odh-dashboard
