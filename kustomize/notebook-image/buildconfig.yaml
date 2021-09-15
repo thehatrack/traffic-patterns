@@ -44,4 +44,4 @@ spec:
     type: GitHub
   - type: ConfigChange
   - type: ImageChange
-      imageChange:
+      imageChange: {}
