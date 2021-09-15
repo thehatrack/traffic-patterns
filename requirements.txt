@@ -1,13 +1,4 @@
-dlib==19.22.1
-# mrcnn
-https://github.com/akTwelve/Mask_RCNN/archive/d9f01dcd83b1e90e5ea0b4b6d5ba753770e114ac.zip
-opencv-python==4.5.3.56
-Pillow==8.3.1
-
-pycocotools==2.0.2
-scikit-image~=0.17.0
-h5py==3.1.0
-tensorflow==2.6.0
-keras==2.6.0
-numpy==1.19.5
-six==1.15.0
+yolov5~=5.0.0
+opencv-python~=4.5.3.56
+Pillow~=8.3.2
+numpy~=1.21.2
