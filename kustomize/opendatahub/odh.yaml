@@ -12,7 +12,7 @@ spec:
     - kustomizeConfig:
         parameters:
           - name: s3_endpoint_url
-            value: s3.odh.com
+            value: s3.openshift-storage.svc:443
         repoRef:
           name: manifests
           path: jupyterhub/jupyterhub

@@ -13,12 +13,21 @@ items:
     name: jupyterhub-singleuser-profile-kube-3aadmin
 - apiVersion: v1
   data:
+    S3_ENDPOINT_URL: s3.openshift-storage.svc:443
+    S3_BUCKET_NAME: traffic-detection-modeling
     JUPYTER_PRELOAD_REPOS1: https://github.com/thehatrack/traffic-patterns
   kind: ConfigMap
   metadata:
     labels:
       app: jupyterhub
     name: jupyterhub-singleuser-profile-kube-3aadmin-envs
+- apiVersion: v1
+  kind: Secret
+  metadata:
+    name: jupyterhub-singleuser-profile-kube-3aadmin-envs
+    labels:
+      app: jupyterhub
+  data: TO_BE_REPLACED
 kind: List
 metadata:
   resourceVersion: ""
