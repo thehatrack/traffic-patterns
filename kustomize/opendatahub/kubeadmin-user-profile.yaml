@@ -27,7 +27,7 @@ items:
     name: jupyterhub-singleuser-profile-kube-3aadmin-envs
     labels:
       app: jupyterhub
-  data: TO_BE_REPLACED
+  data: $(BUCKET_SECRETS)
 kind: List
 metadata:
   resourceVersion: ""
