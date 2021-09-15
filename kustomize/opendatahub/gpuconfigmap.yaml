@@ -1,0 +1,14 @@
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: odh-jupyterhub-custom
+  labels:
+    component.opendatahub.io/name: jupyterhub
+    jupyterhub: singleuser-profiles
+    opendatahub.io/component: 'true'
+data:
+  jupyterhub-singleuser-profiles.yaml: |
+    ui:
+      gpuConfig:
+        enabled: true
+

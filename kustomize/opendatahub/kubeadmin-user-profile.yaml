@@ -3,7 +3,7 @@ items:
 - apiVersion: v1
   data:
     profile: |
-      gpu: '0'
+      gpu: '1'
       last_selected_image: traffic-patterns-notebook-image:latest
       last_selected_size: Large
   kind: ConfigMap

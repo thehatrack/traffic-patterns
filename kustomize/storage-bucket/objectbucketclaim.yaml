@@ -1,0 +1,12 @@
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: traffic-detection-modeling
+spec:
+  additionalConfig:
+    bucketclass: noobaa-default-bucket-class
+  bucketName: traffic-detection-modeling
+  generateBucketName: traffic-detection-modeling
+  objectBucketName: obc-traffic-detection-modeling
+  storageClassName: openshift-storage.noobaa.io
+
