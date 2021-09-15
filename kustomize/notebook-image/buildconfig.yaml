@@ -28,6 +28,9 @@ spec:
   strategy:
     dockerStrategy:
       dockerfilePath: Dockerfile.notebook
+      from:
+        kind: ImageStreamTag
+        name: 'minimal-gpu:py3.8-cuda-11.0.3'
     type: Docker
   successfulBuildsHistoryLimit: 5
   triggers:
@@ -40,3 +43,5 @@ spec:
         name: traffic-patterns-notebook-image-github-webhook-secret
     type: GitHub
   - type: ConfigChange
+  - type: ImageChange
+      imageChange:
