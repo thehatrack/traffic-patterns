@@ -7,6 +7,5 @@ spec:
     bucketclass: noobaa-default-bucket-class
   bucketName: traffic-detection-modeling
   generateBucketName: traffic-detection-modeling
-  objectBucketName: obc-traffic-detection-modeling
   storageClassName: openshift-storage.noobaa.io
 
