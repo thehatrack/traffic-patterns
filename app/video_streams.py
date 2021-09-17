@@ -9,6 +9,7 @@ import threading
 from datetime import datetime
 
 import cv2
+from PIL import Image
 
 
 class VideoSource(object):
@@ -30,11 +31,11 @@ class VideoSource(object):
         
     def snap(self):
         """Return the most recent frame from the video source with timestamp."""
-        # returns (timestamp, image, metadata)
+        # returns (timestamp, image)
         if self._last_frame is not None:
             return (
                 self._last_frame_time,
-                self._last_frame
+                cv2.cvtColor(self._last_frame, cv2.COLOR_BGR2RGB)
             )
         else:
             return (None, None)
